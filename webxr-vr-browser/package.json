@@ -1,0 +1,18 @@
+{
+  "name": "spatial-reader",
+  "version": "0.1.0",
+  "private": true,
+  "description": "WebXR immersive VR browser \u2014 floating panels of curated, embeddable content, navigable with VR controllers or as a 2D fallback.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

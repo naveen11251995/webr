@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Spatial Reader — WebXR browsing panels</title>
+  <meta name="description" content="An immersive WebXR reading room: floating panels of curated, embeddable content you navigate with VR controllers, or flat in any browser." />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header id="chrome">
+      <div id="chrome-brand">
+        <span class="mark" aria-hidden="true"></span>
+        <span class="brand-name">Spatial Reader</span>
+      </div>
+
+      <form id="nav-form" autocomplete="off">
+        <button type="button" id="nav-back" class="chrome-btn" title="Back" disabled>&#8592;</button>
+        <button type="button" id="nav-fwd" class="chrome-btn" title="Forward" disabled>&#8594;</button>
+        <button type="button" id="nav-home" class="chrome-btn" title="Home">&#8226;</button>
+        <input id="nav-input" type="text" placeholder="Open a panel — try “wiki:Aurora” or pick from Home" />
+        <button type="submit" id="nav-go" class="chrome-btn chrome-btn--go">Open</button>
+      </form>
+
+      <div id="chrome-status">
+        <span id="xr-support-label">checking headset&hellip;</span>
+        <button id="xr-button" class="xr-button" disabled>Enter VR</button>
+      </div>
+    </header>
+
+    <main id="stage">
+      <canvas id="scene-canvas"></canvas>
+      <div id="flat-hint">
+        <p>You're in flat-preview mode. Drag to look around, scroll to move, click a panel to select it.</p>
+        <p class="flat-hint-sub">On a headset in Chrome/Meta&nbsp;Browser, use <strong>Enter&nbsp;VR</strong> above for the full immersive room.</p>
+      </div>
+    </main>
+
+    <footer id="log-bar">
+      <span id="log-text">Loading room&hellip;</span>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
